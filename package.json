@@ -1,0 +1,11 @@
+{
+  "name": "html-css-quiz",
+  "version": "1.0.0",
+  "description": "html and css quiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
