@@ -1,29 +1,48 @@
-	<html>
-	<head>
-		<title>HTML & CSS Demo</title>
-		<link rel="stylesheet" href="css/index.css">
-	</head>
-	<body>
-		<div class="box">
-			<div class="font1">Colorlib Contact Form</div>
-			<br>
-			<div class="font2">Contact us for custom quote</div>
-			<br>
-			<form action="/action_page.php">
-				<input type="text" id="fname" name="firstname" placeholder="Your name">
-				<input type="text" id="fname" name="firstname" placeholder="Your Email Address">
-				<input type="text" id="fname" name="firstname" placeholder="Your Phone Number (optional)">
-				<input type="text" id="fname" name="firstname" placeholder="Your Web Site (optional)">
-				<br><br>
-				<textarea>Type your message here....</textarea>
-				<br><br>
-				<input type="submit" value="Submit">
-			</form>
-			
-			<div class="font3" align="center">Designed by <a href="mailto:devery@keystacksolutions.com">devery@keystacksolutions</a></div>
-		</div>
+<html>
+<head>
+	<title>Matrix Multiplication!</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<div class="box">
+		<div class="font1">Matrix Multiplication</div>
+		<br>
+		<div class="font2">Enter the dimensions for both the matrix</div>
+		
+		<br>
+		
+		<div class="font2">Enter Matrix-1 Dimensions: </div>
+		<input type="number" id="matA-row" name="matA-row" placeholder="Enter # rows">
+		<input type="number" id="matA-col" name="matA-col" placeholder="Enter # columns">
+		
+		<br><br>
+		
+		<div class="font2">Enter Matrix-2 Dimensions: </div>
+		<input type="number" id="matB-row" name="matB-row" placeholder="Enter # rows">
+		<input type="number" id="matB-col" name="matB-col" placeholder="Enter # columns">
+		
+		<br><br>
+		
+		<input type="submit" value="Submit!" onClick="createTable()">
+		
+		<br><br>
+
+		<div id="matA"><div class="font2">Enter Matrix 1: </div></div>
+
+		<br>
+
+		<div id="matB"><div class="font2">Enter Matrix 2: </div></div>
+
+		<br>
+		<input type="submit" value="Submit!" onClick="createMatrix()">
+
+		<input type="textarea" id="result" name="answer" placeholder="Answer">
+		
 	</div>
 
-	<script src = "app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	
 </body>
 </html>

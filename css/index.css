@@ -5,12 +5,12 @@ body {
 .box {
 	display: block;
 	width: 350px;
-	height: 475px;
+	height: 500px;
 	position: relative;
 	float: center;
 	top: 25px;
 	border: 10px;
-	padding: 35px;
+	padding: 25px;
 	margin: 10 auto;
 	border-color: black;
 	border-radius: 5px;
@@ -37,7 +37,7 @@ body {
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 49%;
     padding: 10px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -66,12 +66,24 @@ input[type=submit] {
     box-sizing: border-box;
 }*/
 
-textarea {
+input[type=textarea] {
     width: 100%;
-    height: 100px;
+    height: 75px;
     padding: 10px 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     resize: none;
     color: grey;
+    text-align: left;
+}
+
+textarea {
+    width: 100%;
+    height: 10px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    resize: none;
+    color: grey;
+    text-align: left;
 }
