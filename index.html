@@ -2,47 +2,92 @@
 <head>
 	<title>Matrix Multiplication!</title>
 	<link rel="stylesheet" href="css/index.css">
+	
 </head>
 
 <body>
+
 	<div class="box">
-		<div class="font1">Matrix Multiplication</div>
+		<div class="font1">
+			Matrix Multiplication
+		</div>
+
 		<br>
-		<div class="font2">Enter the dimensions for both the matrix</div>
+
+		<div class="font2">
+			Enter the dimensions for both the matrix
+		</div>
 		
 		<br>
 		
-		<div class="font2">Enter Matrix-1 Dimensions: </div>
-		<input type="number" id="matA-row" name="matA-row" placeholder="Enter # rows">
-		<input type="number" id="matA-col" name="matA-col" placeholder="Enter # columns">
+		<div class="font2">
+			Enter Matrix-1 Dimensions:
+		</div>
+
+		<input type="number" class="userInputs" id="matArow" name="matA-row" placeholder="Enter # rows">
+		<input type="number" class="userInputs" id="matAcol" name="matA-col" placeholder="Enter # columns">
 		
 		<br><br>
 		
-		<div class="font2">Enter Matrix-2 Dimensions: </div>
-		<input type="number" id="matB-row" name="matB-row" placeholder="Enter # rows">
-		<input type="number" id="matB-col" name="matB-col" placeholder="Enter # columns">
+		<div class="font2">
+			Enter Matrix-2 Dimensions:
+		</div>
+
+		<input type="number" class="userInputs" id="matBrow" name="matB-row" placeholder="Enter # rows">
+		<input type="number" class="userInputs" id="matBcol" name="matB-col" placeholder="Enter # columns">
 		
 		<br><br>
 		
-		<input type="submit" value="Submit!" onClick="createTable()">
+		<input id="generateButton" type="submit" value="Submit!">
 		
 		<br><br>
 
-		<div id="matA"><div class="font2">Enter Matrix 1: </div></div>
+		<div id="matA">
+			<div class="font2">
+				Enter Matrix 1: 
+			</div>
+		</div>
 
 		<br>
 
-		<div id="matB"><div class="font2">Enter Matrix 2: </div></div>
+		<div id="matB">
+			<div class="font2">
+				Enter Matrix 2:
+			</div>
+		</div>
 
 		<br>
-		<input type="submit" value="Submit!" onClick="createMatrix()">
+		<input id="answerButton" type="submit" value="Submit!">
 
 		<input type="textarea" id="result" name="answer" placeholder="Answer">
 		
+		<div id="box"><div>
+			<!-- <ul> 
+				{{#User}}
+				<li>{{name}}</li>
+				{{/User}}
+			</ul> -->
+
 	</div>
 
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-	
+	<script type="text/javascript" src="node_modules/mustache/mustache.min.js"></script>
+
+	<script type="mustache/x-tmpl" id="cellTpl">	
+		{{#data}}
+			<input type="number" id="{{id}}" class="" />
+				{{#isFull}}
+					<br />
+				{{/isFull}}
+		{{/data}}
+	</script>
+	<script>
+
+		var _onReady = function(){
+			MyApp.init();
+		}
+		$(document).ready(_onReady);
+	</script>
 </body>
 </html>
